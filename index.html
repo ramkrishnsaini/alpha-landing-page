@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Dental Savings — Premium Dental Discounts Membership (USA)</title>
+    <meta
+      name="description"
+      content="My Dental Savings membership: Discounts on Oral Exams, Cleaning, Filling, Complete X‑Rays, Root Canal, Crown, Complete Upper Denture, Braces & more. USA‑wide."
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="My Dental Savings — Premium Dental Discounts"
+    />
+    <meta
+      property="og:description"
+      content="Discounts on Oral Exams, Cleaning, Filling, Complete X‑Rays, Root Canal, Crown, Complete Upper Denture, Braces & more."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/logo.png" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandBlue: "#0796D1", // logo blue
+              brandTeal: "#06D1A1", // logo teal
+              sand: {
+                DEFAULT: "#E9DCC7",
+                200: "#EFE6D6",
+                300: "#E9DCC7",
+                400: "#DEC9A5",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .icon-pattern {
+        background-image: url("#icons-pattern");
+        background-size: 640px 360px;
+        background-repeat: repeat;
+        opacity: 0.08;
+      }
+      .ticket {
+        clip-path: polygon(
+          0 0,
+          100% 0,
+          100% calc(100% - 12px),
+          calc(100% - 12px) 100%,
+          12px 100%,
+          0 calc(100% - 12px)
+        );
+      }
+
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            60% 40% at 20% 10%,
+            rgba(7, 150, 209, 0.18),
+            transparent 70%
+          ),
+          radial-gradient(
+            40% 30% at 80% 20%,
+            rgba(6, 209, 161, 0.16),
+            transparent 70%
+          ),
+          radial-gradient(
+            50% 60% at 70% 80%,
+            rgba(7, 150, 209, 0.14),
+            transparent 70%
+          );
+      }
+      .hero-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.82;
+        mix-blend: multiply;
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "My Dental Savings",
+        "url": "https://www.mydentalsavings.example/",
+        "logo": "assets/logo.png"
+      }
+    </script>
+  </head>
+  <body class="antialiased text-slate-800 bg-white">
+    <!-- SVG defs: icons + tiled pattern -->
+    <svg width="0" height="0" class="absolute">
+      <defs>
+        <symbol id="i-tooth" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M12 2.5c3.6 0 6.5 2.9 6.5 6.5 0 3.4-1.8 7.5-3.2 9.5-.5.7-1.6.8-2.1.1-.9-1.2-1.5-3-1.9-4.6-.4 1.6-1 3.4-1.9 4.6-.5.7-1.6.6-2.1-.1C7.3 16.5 5.5 12.4 5.5 9 5.5 5.4 8.4 2.5 12 2.5z"
+          />
+        </symbol>
+        <symbol id="i-brush" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M3 14l10-10 4 4-10 10H3v-4zM16 4l2-2 4 4-2 2-4-4z"
+          />
+        </symbol>
+        <symbol id="i-exam" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M7 2h2v2h6V2h2v2h3v18H4V4h3V2zm0 6h10V6H7v2zm0 3h10v8H7V11z"
+          />
+        </symbol>
+        <symbol id="i-xray" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M3 4h18v16H3V4zm2 2v12h14V6H5zm2 2h4v3H7V8zm6 0h4v3h-4V8zM7 13h4v3H7v-3zm6 0h4v3h-4v-3z"
+          />
+        </symbol>
+        <symbol id="i-crown" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M3 7l4 3 5-5 5 5 4-3v10H3V7zm2 8h14v2H5v-2z"
+          />
+        </symbol>
+        <symbol id="i-braces" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M4 10h16v4H4v-4zm3 0v4m10-4v4M9 12h6"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+          />
+        </symbol>
+        <symbol id="i-root" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M12 3c4 0 7 3 7 7 0 3-1.6 6.7-3 8.6-.4.6-1.3.7-1.8.1-.8-1-1.2-2.7-1.5-4.2-.3-1.6-.5-3.1-.7-3.1s-.4 1.5-.7 3.1c-.3 1.5-.7 3.2-1.5 4.2-.5.6-1.4.5-1.8-.1C6.6 16.7 5 13 5 10c0-4 3-7 7-7z"
+          />
+        </symbol>
+
+        <pattern
+          id="icons-pattern"
+          x="0"
+          y="0"
+          width="640"
+          height="360"
+          patternUnits="userSpaceOnUse"
+        >
+          <g opacity="0.3" fill="#0796D1">
+            <use href="#i-tooth" x="40" y="40" width="40" height="40" />
+            <use href="#i-exam" x="140" y="70" width="40" height="40" />
+            <use href="#i-brush" x="260" y="30" width="40" height="40" />
+            <use href="#i-xray" x="380" y="80" width="40" height="40" />
+            <use href="#i-crown" x="500" y="40" width="40" height="40" />
+            <use href="#i-braces" x="90" y="200" width="40" height="40" />
+            <use href="#i-root" x="210" y="220" width="40" height="40" />
+            <use href="#i-tooth" x="330" y="200" width="40" height="40" />
+            <use href="#i-crown" x="450" y="230" width="40" height="40" />
+          </g>
+        </pattern>
+      </defs>
+    </svg>
+
+    <div
+      class="bg-gradient-to-r from-brandBlue to-brandTeal text-white text-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between"
+      >
+        <p class="font-medium tracking-wide">PREMIUM DENTAL DISCOUNTS</p>
+        <span class="hidden sm:flex items-center gap-2">Membership Card</span>
+      </div>
+    </div>
+
+    <header
+      class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between"
+      >
+        <a href="#home" class="flex items-center gap-3">
+          <img
+            src="assets/logo.png"
+            alt="My Dental Savings logo"
+            class="h-9 w-auto"
+          />
+          <span class="text-xl font-semibold tracking-tight text-slate-900"
+            >MY DENTAL SAVINGS</span
+          >
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#benefits" class="hover:text-brandBlue">Benefits</a>
+          <a href="#how" class="hover:text-brandBlue">How It Works</a>
+          <a href="#faqs" class="hover:text-brandBlue">FAQs</a>
+          <a href="#contact" class="hover:text-brandBlue">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a
+            href="#check"
+            class="inline-flex items-center rounded-lg bg-brandBlue px-4 py-2 text-white hover:opacity-90 font-semibold"
+            >Check Savings</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero with icon background -->
+    <section id="home" class="relative overflow-hidden">
+      <!-- Background layers: gradient + icon texture + banner image -->
+      <div class="hero-bg"></div>
+      <div class="absolute inset-0 icon-pattern"></div>
+      <img
+        class="hero-img"
+        src="assets/banner-dental-hero.svg"
+        onerror="this.src='assets/banner-dental-hero.png'"
+        alt="Dental services banner"
+      />
+
+      <div
+        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div class="bg-white/70 backdrop-blur rounded-2xl p-6 md:p-8 border">
+          <div
+            class="inline-flex items-center gap-2 ticket bg-sand px-3 py-1 rounded-md text-[13px] font-semibold text-brandBlue border border-sand-400"
+          >
+            PREMIUM DENTAL DISCOUNTS — MEMBERSHIP CARD
+          </div>
+          <h1
+            class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight"
+          >
+            Discounts on <span class="text-brandBlue">Dental Services</span>
+          </h1>
+          <p class="mt-4 text-lg text-slate-700">
+            Oral Exams, Cleaning, Filling, Complete X‑Rays, Root Canal, Crown,
+            Complete Upper Denture, Braces, &amp; MORE.
+          </p>
+          <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700">
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-brandBlue"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <use href="#i-exam" />
+              </svg>
+              Oral Exams
+            </li>
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-brandBlue"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <use href="#i-root" />
+              </svg>
+              Root Canal
+            </li>
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-brandBlue"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <use href="#i-brush" />
+              </svg>
+              Cleaning
+            </li>
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-brandBlue"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <use href="#i-crown" />
+              </svg>
+              Crown
+            </li>
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-brandBlue"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <use href="#i-tooth" />
+              </svg>
+              Filling
+            </li>
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-brandBlue"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <use href="#i-tooth" />
+              </svg>
+              Complete Upper Denture
+            </li>
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-brandBlue"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <use href="#i-xray" />
+              </svg>
+              Complete X‑Rays
+            </li>
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-5 h-5 text-brandBlue"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <use href="#i-braces" />
+              </svg>
+              Braces
+            </li>
+          </ul>
+          <p class="mt-4 text-xs text-slate-600 uppercase tracking-wide">
+            Discounts and savings will vary by procedure, provider and
+            geographical area.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#check"
+              class="inline-flex items-center rounded-lg bg-brandBlue px-6 py-3 text-white hover:opacity-90 font-semibold"
+              >Get My Membership</a
+            >
+            <a
+              href="#benefits"
+              class="inline-flex items-center rounded-lg border px-6 py-3 text-slate-800 hover:bg-slate-50 font-medium"
+              >See All Benefits</a
+            >
+          </div>
+          <div
+            class="mt-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brandBlue to-brandTeal px-3 py-1 text-sm font-semibold text-white"
+          >
+            For Ages <strong>50+</strong> — extra savings on select procedures
+          </div>
+        </div>
+        <div class="hidden md:block"></div>
+      </div>
+      <!-- Decorative bottom wave -->
+      <svg
+        class="absolute bottom-0 left-0 w-full"
+        viewBox="0 0 1440 120"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          fill="white"
+          d="M0,96L60,85.3C120,75,240,53,360,58.7C480,64,600,96,720,106.7C840,117,960,107,1080,90.7C1200,75,1320,53,1380,42.7L1440,32L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"
+        />
+      </svg>
+    </section>
+
+    <!-- Benefits tiles
+ -->
+    <section id="benefits" class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <h2 class="text-3xl font-bold tracking-tight">What You Get</h2>
+          <p class="mt-3 text-slate-600">
+            Instant membership activation, nationwide network access, and
+            transparent discount rates.
+          </p>
+        </div>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="rounded-2xl bg-white border p-6">
+            <div class="w-10 h-10 text-brandBlue">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-full h-full"
+              >
+                <use href="#i-exam" />
+              </svg>
+            </div>
+            <h3 class="mt-3 font-semibold text-lg">Oral Exams & Cleaning</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Routine checkups and cleanings at member discount rates.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white border p-6">
+            <div class="w-10 h-10 text-brandBlue">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-full h-full"
+              >
+                <use href="#i-xray" />
+              </svg>
+            </div>
+            <h3 class="mt-3 font-semibold text-lg">Complete X‑Rays</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Digital X‑rays included in many discount packages.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white border p-6">
+            <div class="w-10 h-10 text-brandBlue">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-full h-full"
+              >
+                <use href="#i-tooth" />
+              </svg>
+            </div>
+            <h3 class="mt-3 font-semibold text-lg">Fillings & Crowns</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Tooth‑colored fillings and quality crowns at reduced rates.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white border p-6">
+            <div class="w-10 h-10 text-brandBlue">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-full h-full"
+              >
+                <use href="#i-root" />
+              </svg>
+            </div>
+            <h3 class="mt-3 font-semibold text-lg">Root Canal</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Endodontic care from vetted providers.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white border p-6">
+            <div class="w-10 h-10 text-brandBlue">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-full h-full"
+              >
+                <use href="#i-crown" />
+              </svg>
+            </div>
+            <h3 class="mt-3 font-semibold text-lg">Dentures</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Complete upper denture options with member savings.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white border p-6">
+            <div class="w-10 h-10 text-brandBlue">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-full h-full"
+              >
+                <use href="#i-braces" />
+              </svg>
+            </div>
+            <h3 class="mt-3 font-semibold text-lg">Braces</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Orthodontic discounts where available.
+            </p>
+          </div>
+        </div>
+        <p class="mt-6 text-xs text-slate-600 uppercase tracking-wide">
+          Discounts and savings will vary by procedure, provider and
+          geographical area.
+        </p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="py-20">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-8 items-start"
+      >
+        <div class="lg:col-span-1">
+          <h2 class="text-3xl font-bold tracking-tight">How It Works</h2>
+          <p class="mt-3 text-slate-600">
+            Three simple steps to start saving on dental care.
+          </p>
+        </div>
+        <ol class="lg:col-span-2 grid sm:grid-cols-3 gap-6">
+          <li class="rounded-2xl border p-6 bg-white">
+            <span class="text-xs font-semibold text-brandBlue">STEP 1</span>
+            <h3 class="mt-2 font-semibold">Choose a Plan</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Select your state and see available discount plans.
+            </p>
+          </li>
+          <li class="rounded-2xl border p-6 bg-white">
+            <span class="text-xs font-semibold text-brandBlue">STEP 2</span>
+            <h3 class="mt-2 font-semibold">Activate Instantly</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Receive your digital membership card immediately.
+            </p>
+          </li>
+          <li class="rounded-2xl border p-6 bg-white">
+            <span class="text-xs font-semibold text-brandBlue">STEP 3</span>
+            <h3 class="mt-2 font-semibold">Save at Checkout</h3>
+            <p class="mt-2 text-sm text-slate-600">
+              Show your card at participating dentists and pay the discounted
+              rate.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold tracking-tight">
+          Frequently Asked Questions
+        </h2>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <details class="rounded-2xl border p-6 bg-white">
+            <summary class="font-semibold cursor-pointer">
+              Is this insurance?
+            </summary>
+            <p class="mt-3 text-sm text-slate-700">
+              No. My Dental Savings is a membership program that provides
+              discounted rates at participating providers. You pay the provider
+              directly at the discounted price.
+            </p>
+          </details>
+          <details class="rounded-2xl border p-6 bg-white">
+            <summary class="font-semibold cursor-pointer">
+              When can I start using my membership?
+            </summary>
+            <p class="mt-3 text-sm text-slate-700">
+              Immediately after activation. Your digital card is available right
+              away.
+            </p>
+          </details>
+          <details class="rounded-2xl border p-6 bg-white">
+            <summary class="font-semibold cursor-pointer">
+              Do discounts vary by location?
+            </summary>
+            <p class="mt-3 text-sm text-slate-700">
+              Yes. Discounts and savings will vary by procedure, provider and
+              geographical area.
+            </p>
+          </details>
+          <details class="rounded-2xl border p-6 bg-white">
+            <summary class="font-semibold cursor-pointer">
+              Can I cancel?
+            </summary>
+            <p class="mt-3 text-sm text-slate-700">
+              Yes. You can cancel anytime prior to your renewal date.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 border-t">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-8"
+      >
+        <div class="lg:col-span-1">
+          <h2 class="text-3xl font-bold tracking-tight">We’re here to help</h2>
+          <p class="mt-3 text-slate-600">
+            Questions about plans or providers? Get in touch.
+          </p>
+          <ul class="mt-4 space-y-1 text-slate-700 text-sm">
+            <li>Email: support@mydentalsavings.example</li>
+            <li>Phone: (555) 123‑4567</li>
+            <li>Hours: Mon–Fri 8am–6pm (ET)</li>
+          </ul>
+          <div class="mt-6 flex gap-3">
+            <a
+              href="privacy.html"
+              class="inline-flex items-center rounded-lg border px-4 py-2 hover:bg-slate-50"
+              >Privacy Policy</a
+            >
+            <a
+              href="terms.html"
+              class="inline-flex items-center rounded-lg border px-4 py-2 hover:bg-slate-50"
+              >Terms & Conditions</a
+            >
+          </div>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="rounded-2xl border bg-white p-6">
+            <h3 class="font-semibold">Send a Message</h3>
+            <form
+              class="mt-4 grid gap-4"
+              onsubmit="event.preventDefault(); alert('Message sent!');"
+            >
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="cname" class="block text-sm font-medium"
+                    >Full Name</label
+                  >
+                  <input
+                    id="cname"
+                    type="text"
+                    class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-brandBlue"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="cemail" class="block text-sm font-medium"
+                    >Email</label
+                  >
+                  <input
+                    id="cemail"
+                    type="email"
+                    class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-brandBlue"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <label for="cmsg" class="block text-sm font-medium"
+                  >Message</label
+                >
+                <textarea
+                  id="cmsg"
+                  rows="4"
+                  class="mt-1 w-full rounded-lg border px-3 py-2 focus:ring-2 focus:ring-brandBlue"
+                  required
+                ></textarea>
+              </div>
+              <button
+                class="inline-flex items-center rounded-lg bg-brandBlue px-5 py-3 text-white font-semibold hover:opacity-90"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-3 text-sm"
+      >
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.png" class="h-6 w-auto" alt="logo" />
+          <span class="font-semibold text-slate-900">MY DENTAL SAVINGS</span>
+        </div>
+        <nav class="flex items-center gap-4">
+          <a href="privacy.html" class="hover:text-brandBlue">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-brandBlue"
+            >Terms & Conditions</a
+          >
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
